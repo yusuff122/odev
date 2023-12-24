@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="public/ana_sayfa.css">
+</head>
+<body>
+  <h1>Ana sayfa</h1>
+
+  <form action="/ana_sayfa" method="post">
+    <input type="hidden" id="hiddenName" name="name" value="{{name}}">
+
+    <div class="form-group">
+      <label for="sehir">Şehir:</label>
+      <input type="text" id="sehir" name="sehir" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="ulke">Ülke:</label>
+      <input type="text" id="ulke" name="ulke" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="cepno">Cep Telefonu:</label>
+      <input type="text" id="cepno" name="cepno" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label for="adres">Adres:</label>
+      <textarea id="adres" name="adres" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Gönder</button>
+  </form>
+</body>
+</html>
