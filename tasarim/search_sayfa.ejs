@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    .container {
+        display: flex;
+      width: 30%;
+      height: 65%;
+      text-align: center;
+      flex-direction: column;
+      background-color:white;
+      border-radius: 10px;
+      
+    }
+    
+    label {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      display: flex;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 8px;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+    }
+    .rounded-box {
+      background-color: chartreuse;
+      border-top-left-radius: 60%;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 60%;
+      border-bottom-left-radius: 0;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
+    .info-box {
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.info-box p {
+  margin: 10px 0;
+}
+  </style>
+ 
+</head>
+<body>
+  <div class="container">
+    <div class="rounded-box">
+        <h3>User Search</h3>
+      </div>
+      <form action="/search_sayfa" method="post" id="searchForm">
+    <label for="searchInput">User name:</label>
+    <input type="text" id="searchInput" name="searchInput">
+    <button type="submit" id="searchButton">Search</button>
+
+    <div id="user-info" class="info-box">
+    <% if (typeof sehir !== 'undefined') { %>
+      <p>Şehir: <%= sehir %></p>
+    <% }  %>
+    <% if (typeof ulke !== 'undefined') { %>
+      <p>Ulke: <%= ulke %></p>
+    <% }  %>
+    <% if (typeof cepno !== 'undefined') { %>
+      <p>Telefon numarsı: <%= cepno %></p>
+    <% }  %>
+    <% if (typeof adres !== 'undefined') { %>
+      <p>Adres: <%= adres %></p>
+    <% }  %>
+    </div>
+    
+  </form>
+  
+  </div>
+
+</body>
+</html>

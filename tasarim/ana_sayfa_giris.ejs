@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana sayfa giriş</title>
+    <style>
+  .container {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 30%;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.detailButton {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;  
+  justify-content: center;
+  color: white;
+  height: 15%;
+  width: 100%;
+  border-radius: 10;
+  background-color: blue;
+  margin-bottom: 10px;
+}
+.searchButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;  
+  justify-content: center;
+  color: white;
+  height: 15%;
+  width: 100%;
+  border-radius: 10;
+  background-color: darkslategray;
+  margin-bottom: 10px;
+}
+.logoutButton {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;  
+  justify-content: center;
+  color: white;
+  height: 15%;
+  width: 100%;
+  border-radius: 10;
+  background-color: red;
+  margin-bottom: 10px;
+}
+label[for="name"] {
+  font-size: 34px; 
+  color:black; 
+  margin-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <label for="name" id="name">Welcome,  <%= name %></label>
+        
+            <button class="detailButton"  id="detailButton" > Add Details</button>
+       
+            <button class="searchButton" id="searchButton"> Search User</button>
+            
+            <button class="logoutButton">Logout</button>
+     
+            <script>
+              const detailButton = document.getElementById('detailButton');
+              
+
+              detailButton.addEventListener('click', function() {
+                const nameValue = document.getElementById('name').innerText;
+               
+               //const name = nameElement.textContent.split(', ')[1];
+                window.location.href = `ana_sayfa?name=${nameValue}`;
+              });
+
+              const searchButton = document.getElementById('searchButton');
+              searchButton.addEventListener('click', function() {
+                
+                window.location.href = `search_sayfa`;
+              });
+              
+              
+            </script>
+    </div>
+  </body>
+  
+</html>

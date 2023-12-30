@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+        body {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           min-height: 100vh;
+           background-color: #f0f0f0;
+         }
+         
+         .container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: calc(30%); /* Adjust the width */
+            margin-left: 20px; /* Shift it to the right */
+          }
+         
+         h2  {
+           text-align: center;
+           margin-bottom: 20px;
+           
+         }
+         
+         form {
+           width: 100%;
+           max-width: 350px;
+         }
+         
+         input[type="text"],
+         input[type="password"] {
+           width: 100%;
+           padding: 12px 20px;
+           margin-bottom: 10px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           background-color: #f5f5f5;
+         }
+         
+         input[type="submit"] {
+           background-color: #007bff;
+           color: white;
+           border: none;
+           padding: 10px 10px;
+           border-radius: 4px;
+           cursor: pointer;
+           width: 100%;
+           
+         }
+         
+         a {
+           text-decoration: none;
+           color: #007bff;
+          }
+           </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <p>Kayıt ol</p>
+    <form action="/kayit_sayfa " method="post">
+        <label for="name">  name:</label>
+    <input type="text" name="name" placeholder="">
+    <label for="name">  password:</label>
+    <input type="password" name="password" placeholder="">
+    <label for="name"> Custom password:</label>
+    <input type="text" name="Custompassword" placeholder="">
+    <input type="submit">
+    
+    </form>
+    </div>
+</body>
+</html>
